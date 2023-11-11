@@ -7,6 +7,26 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <script src="./app.js"></script>
+    <!-- 실시간 시계 -->
+    <h2 id="clock">00:00:00</h2>
+
+    <!-- 로컬 스토리지를 사용한 로그인 -->
+    <form id="login-form" class="hidden">
+      <input
+        type="text"
+        placeholder="What is your name?"
+        required
+        maxlength="15"
+      />
+      <input type="submit" value="Log In" />
+    </form>
+    <h1 id="greeting" class="hidden"></h1>
+
+    <!-- 로컬 스토리지를 사용한 투두리스트 -->
+    <!-- 랜덤 배경 이미지 -->
+    <!-- 날씨와 위치 -->
+    <!-- MY CSS 😎 -->
+    <script src="./JS/greetings.js"></script>
+    <script src="./JS/clock.js"></script>
   </body>
 </html>
