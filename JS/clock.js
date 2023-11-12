@@ -1,4 +1,5 @@
 const clock = document.querySelector('h2#clock');
+const date = document.querySelector('#date');
 
 function getClock() {
   const date = new Date();
@@ -12,16 +13,13 @@ function getClock() {
 getClock();
 setInterval(getClock, 1000);
 
-// clock.innerText =
-function sayHello() {
-  console.log('hi');
-}
-
+const getDate = new Date().toLocaleDateString('en-CA');
+date.innerText = `${getDate}`;
 // 계속 무언가를 실행시켜주고 싶을 때 사용
 // setInterval(sayHello, 2000);
 
 //
 // setTimeout(sayHello, 5000);
 
-const date = new Date();
-console.log(date);
+// const date = new Date();
+// console.log(date);
