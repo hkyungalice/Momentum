@@ -3,30 +3,66 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css" />
+    <title>안녕 another Alice! ☺️</title>
+    <link rel="stylesheet" href="./CSS/reset.css" />
+    <link rel="stylesheet" href="./CSS/style.css" />
+    <script defer src="./JS/weather.js"></script>
   </head>
   <body>
-    <!-- 실시간 시계 -->
-    <h2 id="clock">00:00:00</h2>
+    <div id="contents">
+      <!-- 실시간 시계 -->
+      <div id="aboutTime">
+        <h2 id="date" class="textShadow"></h2>
+        <h2 id="clock" class="textShadow">00:00:00</h2>
+      </div>
 
-    <!-- 로컬 스토리지를 사용한 로그인 -->
-    <form id="login-form" class="hidden">
-      <input
-        type="text"
-        placeholder="What is your name?"
-        required
-        maxlength="15"
-      />
-      <input type="submit" value="Log In" />
-    </form>
-    <h1 id="greeting" class="hidden"></h1>
+      <!-- 날씨와 위치 -->
+      <div id="weather">
+        <span class="textShadow"></span>
+        <span class="textShadow"></span>
+      </div>
 
-    <!-- 로컬 스토리지를 사용한 투두리스트 -->
-    <!-- 랜덤 배경 이미지 -->
-    <!-- 날씨와 위치 -->
-    <!-- MY CSS 😎 -->
-    <script src="./JS/greetings.js"></script>
-    <script src="./JS/clock.js"></script>
+      <!-- 로컬 스토리지를 사용한 로그인 -->
+      <form id="login-form" class="hidden">
+        <input
+          type="text"
+          placeholder="What is your name?"
+          required
+          maxlength="15"
+        />
+        <input type="submit" value="Log In" />
+      </form>
+      <h1 id="greeting" class="hidden"></h1>
+
+      <!-- 로컬 스토리지를 사용한 투두리스트 -->
+      <div id="todo">
+        <h1 id="todo-title"></h1>
+        <form id="todo-form">
+          <input type="text" placeholder="Write a To Do and Press Enter" />
+        </form>
+        <ul id="todo-list" class="scroll">
+          <!--
+          <li>
+            <span>todo list</span>
+            <button>❌</button>
+          </li>
+        --></ul>
+      </div>
+
+      <!-- 랜덤 배경 이미지 -->
+      <div id="quote">
+        <span></span>
+        <span></span>
+      </div>
+
+      <!-- MY CSS 😎 -->
+      <script src="./JS/greetings.js"></script>
+      <script src="./JS/clock.js"></script>
+      <script src="./JS/quotes.js"></script>
+      <script src="./JS/background.js"></script>
+      <script src="./JS/todo.js"></script>
+    </div>
+
+    <!-- bg img -->
   </body>
 </html>
