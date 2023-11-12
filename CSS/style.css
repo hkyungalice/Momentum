@@ -1,0 +1,184 @@
+body {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  font-size: 16px;
+  overflow: hidden;
+}
+
+/* common Style */
+input {
+  padding: 8px 10px;
+  border: none;
+  border-radius: 5px;
+}
+
+input[type='text'] {
+  min-width: 200px;
+}
+
+.hidden {
+  display: none;
+}
+
+.scroll::-webkit-scrollbar {
+  background-color: transparent;
+}
+
+.scroll::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: #fde9ec;
+}
+
+.textShadow {
+  text-shadow: 1px 1px 2px #fde9ec91;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes textDown {
+  from {
+    margin-top: -10px;
+    opacity: 0;
+  }
+  to {
+    margin-top: 0;
+    opacity: 1;
+  }
+}
+
+/* contents -> bg upon */
+#contents {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
+
+/* 날짜, 시간 */
+#aboutTime {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+/* 시간 */
+#aboutTime #clock {
+  font-size: 5rem;
+}
+
+/* 로그인 */
+#login-form,
+#greeting {
+  position: absolute;
+  top: 40px;
+  right: 40px;
+}
+
+#greeting {
+  font-size: 1.2rem;
+  font-weight: 600;
+  animation: fadein 1s;
+}
+
+/* 날씨와 위치 */
+#weather {
+  margin-top: 30px;
+  font-size: 1.2rem;
+}
+
+#weather span {
+  font-weight: 700;
+}
+
+/* 투두 리스트 */
+#todo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 300px;
+  margin-top: 20px;
+  padding-bottom: 30px;
+  border-radius: 12px;
+  background-color: #fde9ecba;
+}
+
+#todo #todo-title {
+  padding: 30px 0 20px;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+#todo #todo-form {
+  margin-bottom: 10px;
+}
+
+#todo #todo-list {
+  width: 200px;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+#todo #todo-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 5px;
+  margin-right: 5px;
+  padding-left: 10px;
+  border-bottom: 1px solid #fff;
+}
+
+#todo #todo-list button {
+  cursor: pointer;
+  margin-left: 10px;
+  padding: 8px 10px;
+  border: none;
+  background-color: transparent;
+}
+
+/* quote */
+#quote {
+  position: absolute;
+  bottom: 8%;
+
+  padding: 5px 20px 3.5px;
+  color: #fde9ec;
+  font-weight: 600;
+  background-color: #000000;
+  animation: textDown 1.2s;
+}
+
+#quote span:first-child {
+  margin-right: 20px;
+  margin-bottom: 10px;
+}
+
+/* img -> bg */
+.bgimg {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  transform: scale(1.2);
+  z-index: 1;
+}
